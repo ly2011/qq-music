@@ -1,0 +1,21 @@
+.loading {
+  overflow: hidden;
+  text-align: center;
+  color: #8f8f8f;
+
+  img {
+    display: block;
+    height: 100px;
+    width: 100px;
+    margin: 60px auto 50px;
+  }
+
+  p {
+    span {
+      display: inline-block;
+      width: 20px;
+      overflow: hidden;
+      vertical-align: middle;
+    }
+  }
+}

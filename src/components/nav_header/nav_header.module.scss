@@ -1,0 +1,71 @@
+@import '../../styles/variables.scss';
+
+.header {
+  position: relative;
+  // display: flex;
+  // align-items: center;
+  height: $header-height;
+  background: $header-background;
+  .logo {
+    // height: $logo-height;
+    // margin-left: 10px;
+    float: left;
+    display: block;
+    width: $logo-width;
+    height: $logo-height;
+    margin: 9px 0 0 10px;
+    background-image: url('../../assets/images/logo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+  }
+  .btn_download {
+    position: absolute;
+    display: inline-block;
+    right: 10px;
+    top: 8px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+    padding: 0 12px;
+    background-color: #149c5a;
+    color: #fff;
+    border-radius: 99px;
+  }
+}
+.navbar {
+  background-color: #fff;
+  .nav-list {
+    display: flex;
+    align-items: center;
+    .nav-item {
+      text-align: center;
+      flex: 1;
+      position: relative;
+      height: $nav-item-height;
+      line-height: $nav-item-height;
+      list-style: none;
+      font-size: 16px;
+      > a {
+        display: block;
+        color: $nav-item-color;
+        text-decoration: none;
+      }
+      :global {
+        & .active {
+          color: $nav-item-active;
+          &:after {
+            position: absolute;
+            display: block;
+            content: '';
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: $nav-item-active;
+          }
+        }
+      }
+    }
+  }
+}
