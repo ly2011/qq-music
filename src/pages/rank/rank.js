@@ -1,4 +1,6 @@
 import React, { PureComponent } from 'react'
+import LazyLoad from 'react-lazyload'
+
 import { getRankList } from '../../services/getData'
 import { dealNum } from '../../utils/filter'
 
@@ -46,7 +48,9 @@ class RankList extends PureComponent {
                   <li className={styles['topic_item']} key={item.id}>
                     <div className={styles['topic_main']}>
                       <a href="javascript:;" role="button" className={styles['topic_media']}>
-                        <img src={item.picUrl} alt="" />
+                        <LazyLoad height={200}>
+                          <img src={item.picUrl} alt="" />
+                        </LazyLoad>
                         <span className={styles['listen_count']}>
                           <i className={styles['icon_listen']} />
                           {dealNum(item.listenCount)}
