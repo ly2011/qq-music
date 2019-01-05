@@ -24,6 +24,10 @@ export default function({ history, app }) {
     app,
     component: () => import('./components/player/player')
   })
+  const Taoge = dynamic({
+    app,
+    component: () => import('./pages/taoge/taoge')
+  })
   return (
     <Router history={history}>
       <Switch>
@@ -31,6 +35,7 @@ export default function({ history, app }) {
         <Route exact path="/rank" component={RankList} />
         <Route exact path="/search" component={Search} />
         <Route exact path="/player" component={Player} />
+        <Route exact path="/taoge/:songid" component={Taoge} />
       </Switch>
     </Router>
   )

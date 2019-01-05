@@ -4,16 +4,19 @@
   height: 48px;
   padding: 0 16px 0 14px;
   color: #fff;
-  background-color: rgba(0, 0, 0, .2);
+  background-color: rgba(0, 0, 0, 0.2);
 
   &__img {
     display: block;
     width: 36px;
+    height: 36px;
     margin-right: 3px;
+    align-self: center;
   }
 
   &__bd {
     flex: 1;
+    align-self: center;
   }
 
   &__tit {
@@ -26,6 +29,7 @@
   }
 
   &__btn {
+    align-self: center;
     position: relative;
     display: block;
     height: 24px;
@@ -35,7 +39,7 @@
     color: #fff;
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: 0;

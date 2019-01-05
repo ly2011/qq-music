@@ -1,11 +1,9 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'dva'
 import { getHotList, getSearchList } from '../../services/getData'
-// import { dealNum } from '../../utils/filter'
 
 import NavHeader from '../../components/nav_header/nav_header'
 import Loading from '../../components/loading/loading'
-import Player from '../../components/player/player'
 
 import styles from './search.module.scss'
 

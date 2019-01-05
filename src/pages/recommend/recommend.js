@@ -3,6 +3,8 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
 import LazyLoad from 'react-lazyload'
 
+import { connect } from 'dva'
+
 import { getRecommendList } from '../../services/getData'
 import { dealNum } from '../../utils/filter'
 
@@ -39,6 +41,10 @@ class RecommendList extends PureComponent {
         })
       })
   }
+  // 显示 player 信息
+  toTaogePage = songid => {
+    this.props.history.push({ pathname: `/taoge/${songid}`, query: { songid }, state: { songid }, songid })
+  }
 
   render() {
     const { isLoading, slider, radioList, songList } = this.state
@@ -60,7 +66,7 @@ class RecommendList extends PureComponent {
               </Carousel>
             )}
 
-            <div className={[styles['radios']]}>
+            <div className={styles['radios']}>
               {radioList && <h2 className={styles['list_title']}>电台</h2>}
               <ul className={styles['list_container']}>
                 {radioList &&
@@ -74,7 +80,7 @@ class RecommendList extends PureComponent {
                           <span className={`${styles['icon']} ${styles['icon_play']}`} />
                         </div>
                         <div className={styles['list_info']}>
-                          <h3 className={[styles['list_tit']]}>{item.Ftitle}</h3>
+                          <h3 className={styles['list_tit']}>{item.Ftitle}</h3>
                         </div>
                       </a>
                     </li>
@@ -88,7 +94,7 @@ class RecommendList extends PureComponent {
                 {songList &&
                   songList.map(item => (
                     <li className={styles['js_play_radio']} key={item.id}>
-                      <a href="javascript:;" className={styles['list_main']}>
+                      <a href="javascript:;" className={styles['list_main']} onClick={() => this.toTaogePage(item.id)}>
                         <div className={styles['list_media']}>
                           <LazyLoad height={200}>
                             <img className={styles['list_pic']} src={item.picUrl} alt="" />
@@ -116,5 +122,20 @@ class RecommendList extends PureComponent {
     )
   }
 }
-
-export default RecommendList
+function mapStateToProps(state, ownProps) {
+  return {}
+}
+function mapDispatchToProps(dispatch) {
+  return {
+    getSong: song => {
+      dispatch({ type: 'app/getSong', payload: song })
+    },
+    showPlayer: () => {
+      dispatch({ type: 'app/showPlayer' })
+    }
+  }
+}
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(RecommendList)

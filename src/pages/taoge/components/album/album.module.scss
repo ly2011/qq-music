@@ -5,6 +5,7 @@
   margin-top: 17px;
   padding: 0 16px;
   overflow: hidden;
+  box-sizing: border-box;
 
   &__media {
     position: relative;
@@ -13,7 +14,7 @@
     overflow: hidden;
 
     &::after {
-      content: "";
+      content: '';
       display: block;
       padding-top: 100%;
     }

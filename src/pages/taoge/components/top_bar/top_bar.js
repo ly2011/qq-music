@@ -8,8 +8,8 @@ const TopBar = () => (
   <div className={styles['top_bar']}>
     <img className={styles['top_bar__img']} src={logo} alt="" />
     <div className={styles['top_bar__bd']}>
-      <h6 className={styles['top_bar__tit']}></h6>
-      <p className={styles['top_bar__desc']}></p>
+      <h6 className={styles['top_bar__tit']}>QQ音乐</h6>
+      <p className={styles['top_bar__desc']}>打开APP收藏、下载</p>
     </div>
     <a href="javascript:;" className={styles['top_bar__btn']}>
       打开
