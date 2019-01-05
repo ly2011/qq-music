@@ -1,8 +1,16 @@
+### 自动化部署到 gh-pages
+
+```bash
+yarn run deploy
+```
+
 ### TODO
 
-[x] 滚动歌词，可以快进歌曲
-[x] 播放器可以调节音量
-[x] 刷新页面歌曲还存在(数据持久化)
+- [x] 滚动歌词，可以快进歌曲
+
+- [x] 播放器可以调节音量
+
+- [x] 刷新页面歌曲还存在(数据持久化)
 
 ### 参考文档
 1. [AccountSystem](https://github.com/yvanwangl/AccountSystem)
