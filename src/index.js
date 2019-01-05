@@ -1,12 +1,12 @@
 import dva from 'dva'
-import { browserHistory } from 'dva/router'
+import createHistory from 'history/createHashHistory'
 import router from './router'
 
 import './index.scss'
 
 // 1.Initialize
 const app = dva({
-  history: browserHistory,
+  history: createHistory(),
   onError(e, dispatch) {
     console.error(e)
   }

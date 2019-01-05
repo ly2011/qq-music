@@ -2871,6 +2871,7 @@ dva-core@^1.4.0:
 dva@^2.4.1:
   version "2.4.1"
   resolved "http://registry.npm.taobao.org/dva/download/dva-2.4.1.tgz#a3eeb07bb8bc6e2ff9ffe31799d03cb69e45f5fd"
+  integrity sha1-o+6we7i8bi/5/+MXmdA8tp5F9f0=
   dependencies:
     "@babel/runtime" "7.0.0-beta.46"
     "@types/isomorphic-fetch" "^0.0.34"

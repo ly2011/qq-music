@@ -36,6 +36,15 @@ class Player extends PureComponent {
     })
     this.getLyrics()
   }
+  componentWillUnmount() {
+    try {
+      const { setPlayState } = this.props
+      this.audioRef.pause()
+      setPlayState(false)
+      this.pauseLyrics()
+      this.pauseProgress()
+    } catch (error) {}
+  }
   getLyrics = () => {
     const { songid } = this.props.song
     this.setState({ isLoading: true })
