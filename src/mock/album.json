@@ -1,0 +1,737 @@
+{
+  "001tj1Yu3ycuX3": {
+    "aDate": "2019-01-05",
+    "albumTips": "",
+    "color": 3161668,
+    "company": "霍尔果斯梦幻星生园传媒有限公司",
+    "company_new": {
+      "brief": "",
+      "headPic": "",
+      "id": 48872,
+      "is_show": 1,
+      "name": "霍尔果斯梦幻星生园传媒有限公司"
+    },
+    "cur_song_num": 13,
+    "desc": "电视剧《幕后之王》原声专辑群声汇聚，张靓颖、陈立农、汪苏泷、金玟岐、苏诗丁等众多歌坛实力唱将演绎台前幕后的动人音符。 2019年1月5日起，来东方卫视、北京卫视、优酷视频，跟电视剧《幕后之王》一起唱响逐梦之路。",
+    "genre": "Soundtrack 原声",
+    "id": 5764164,
+    "lan": "国语",
+    "list": [
+      {
+        "albumdesc": "《幕后之王》电视剧主题曲",
+        "albumid": 5764164,
+        "albummid": "001tj1Yu3ycuX3",
+        "albumname": "幕后之王 电视原声音乐专辑",
+        "alertid": 11,
+        "belongCD": 1,
+        "cdIdx": 0,
+        "interval": 257,
+        "isonly": 0,
+        "label": "0",
+        "msgid": 0,
+        "pay": {
+          "payalbum": 0,
+          "payalbumprice": 0,
+          "paydownload": 0,
+          "payinfo": 0,
+          "payplay": 0,
+          "paytrackmouth": 0,
+          "paytrackprice": 0,
+          "timefree": 0
+        },
+        "preview": {
+          "trybegin": 0,
+          "tryend": 0,
+          "trysize": 0
+        },
+        "rate": 23,
+        "singer": [
+          {
+            "id": 4607,
+            "mid": "000aw4WC2EQYTv",
+            "name": "张靓颖"
+          }
+        ],
+        "size128": 4116702,
+        "size320": 10291014,
+        "size5_1": 0,
+        "sizeape": 0,
+        "sizeflac": 54556098,
+        "sizeogg": 5691686,
+        "songid": 226725940,
+        "songmid": "0020KLw32WXvI7",
+        "songname": "我爱你三个字能倒过来",
+        "songorig": "我爱你三个字能倒过来",
+        "songtype": 0,
+        "strMediaMid": "0020KLw32WXvI7",
+        "stream": 13,
+        "switch": 605971,
+        "type": 0,
+        "vid": ""
+      },
+      {
+        "albumdesc": "《幕后之王》电视剧片头曲",
+        "albumid": 5764164,
+        "albummid": "001tj1Yu3ycuX3",
+        "albumname": "幕后之王 电视原声音乐专辑",
+        "alertid": 11,
+        "belongCD": 2,
+        "cdIdx": 0,
+        "interval": 228,
+        "isonly": 0,
+        "label": "0",
+        "msgid": 0,
+        "pay": {
+          "payalbum": 0,
+          "payalbumprice": 0,
+          "paydownload": 0,
+          "payinfo": 0,
+          "payplay": 0,
+          "paytrackmouth": 0,
+          "paytrackprice": 0,
+          "timefree": 0
+        },
+        "preview": {
+          "trybegin": 0,
+          "tryend": 0,
+          "trysize": 0
+        },
+        "rate": 23,
+        "singer": [
+          {
+            "id": 2096528,
+            "mid": "000W6adM4E0PK6",
+            "name": "陈立农"
+          }
+        ],
+        "size128": 3664924,
+        "size320": 9161923,
+        "size5_1": 0,
+        "sizeape": 0,
+        "sizeflac": 51991450,
+        "sizeogg": 5226022,
+        "songid": 226728169,
+        "songmid": "004BORA80Vp39B",
+        "songname": "有梦可待",
+        "songorig": "有梦可待",
+        "songtype": 0,
+        "strMediaMid": "004BORA80Vp39B",
+        "stream": 13,
+        "switch": 605971,
+        "type": 0,
+        "vid": ""
+      },
+      {
+        "albumdesc": "《幕后之王》电视剧插曲",
+        "albumid": 5764164,
+        "albummid": "001tj1Yu3ycuX3",
+        "albumname": "幕后之王 电视原声音乐专辑",
+        "alertid": 11,
+        "belongCD": 3,
+        "cdIdx": 0,
+        "interval": 249,
+        "isonly": 0,
+        "label": "0",
+        "msgid": 0,
+        "pay": {
+          "payalbum": 0,
+          "payalbumprice": 0,
+          "paydownload": 0,
+          "payinfo": 0,
+          "payplay": 0,
+          "paytrackmouth": 0,
+          "paytrackprice": 0,
+          "timefree": 0
+        },
+        "preview": {
+          "trybegin": 0,
+          "tryend": 0,
+          "trysize": 0
+        },
+        "rate": 23,
+        "singer": [
+          {
+            "id": 3954,
+            "mid": "001z2JmX09LLgL",
+            "name": "汪苏泷"
+          }
+        ],
+        "size128": 3995509,
+        "size320": 9988417,
+        "size5_1": 0,
+        "sizeape": 0,
+        "sizeflac": 55559034,
+        "sizeogg": 5693623,
+        "songid": 226728174,
+        "songmid": "001EOQc70a1cxg",
+        "songname": "鲸落",
+        "songorig": "鲸落",
+        "songtype": 0,
+        "strMediaMid": "001EOQc70a1cxg",
+        "stream": 13,
+        "switch": 605971,
+        "type": 0,
+        "vid": ""
+      },
+      {
+        "albumdesc": "《幕后之王》电视剧插曲",
+        "albumid": 5764164,
+        "albummid": "001tj1Yu3ycuX3",
+        "albumname": "幕后之王 电视原声音乐专辑",
+        "alertid": 11,
+        "belongCD": 4,
+        "cdIdx": 0,
+        "interval": 206,
+        "isonly": 0,
+        "label": "0",
+        "msgid": 0,
+        "pay": {
+          "payalbum": 0,
+          "payalbumprice": 0,
+          "paydownload": 0,
+          "payinfo": 0,
+          "payplay": 0,
+          "paytrackmouth": 0,
+          "paytrackprice": 0,
+          "timefree": 0
+        },
+        "preview": {
+          "trybegin": 0,
+          "tryend": 0,
+          "trysize": 0
+        },
+        "rate": 23,
+        "singer": [
+          {
+            "id": 178612,
+            "mid": "004OFF5J1uCT1c",
+            "name": "金玟岐"
+          }
+        ],
+        "size128": 3301283,
+        "size320": 8252846,
+        "size5_1": 0,
+        "sizeape": 0,
+        "sizeflac": 46436770,
+        "sizeogg": 4478074,
+        "songid": 226728168,
+        "songmid": "0036CAuS0g73Z1",
+        "songname": "幕后大咖",
+        "songorig": "幕后大咖",
+        "songtype": 0,
+        "strMediaMid": "0036CAuS0g73Z1",
+        "stream": 13,
+        "switch": 605971,
+        "type": 0,
+        "vid": ""
+      },
+      {
+        "albumdesc": "《幕后之王》电视剧插曲",
+        "albumid": 5764164,
+        "albummid": "001tj1Yu3ycuX3",
+        "albumname": "幕后之王 电视原声音乐专辑",
+        "alertid": 11,
+        "belongCD": 5,
+        "cdIdx": 0,
+        "interval": 186,
+        "isonly": 0,
+        "label": "0",
+        "msgid": 0,
+        "pay": {
+          "payalbum": 0,
+          "payalbumprice": 0,
+          "paydownload": 0,
+          "payinfo": 0,
+          "payplay": 0,
+          "paytrackmouth": 0,
+          "paytrackprice": 0,
+          "timefree": 0
+        },
+        "preview": {
+          "trybegin": 0,
+          "tryend": 0,
+          "trysize": 0
+        },
+        "rate": 23,
+        "singer": [
+          {
+            "id": 1235352,
+            "mid": "000PvQw11mIVEK",
+            "name": "苏诗丁"
+          }
+        ],
+        "size128": 2989062,
+        "size320": 7472030,
+        "size5_1": 0,
+        "sizeape": 0,
+        "sizeflac": 41107166,
+        "sizeogg": 4097452,
+        "songid": 226728171,
+        "songmid": "003pEDtl2MLm5Y",
+        "songname": "独白",
+        "songorig": "独白",
+        "songtype": 0,
+        "strMediaMid": "003pEDtl2MLm5Y",
+        "stream": 13,
+        "switch": 605971,
+        "type": 0,
+        "vid": ""
+      },
+      {
+        "albumdesc": "《幕后之王》电视剧插曲",
+        "albumid": 5764164,
+        "albummid": "001tj1Yu3ycuX3",
+        "albumname": "幕后之王 电视原声音乐专辑",
+        "alertid": 11,
+        "belongCD": 6,
+        "cdIdx": 0,
+        "interval": 246,
+        "isonly": 0,
+        "label": "0",
+        "msgid": 0,
+        "pay": {
+          "payalbum": 0,
+          "payalbumprice": 0,
+          "paydownload": 0,
+          "payinfo": 0,
+          "payplay": 0,
+          "paytrackmouth": 0,
+          "paytrackprice": 0,
+          "timefree": 0
+        },
+        "preview": {
+          "trybegin": 0,
+          "tryend": 0,
+          "trysize": 0
+        },
+        "rate": 23,
+        "singer": [
+          {
+            "id": 4251,
+            "mid": "000PoJ8N3ZS43F",
+            "name": "凌晗"
+          },
+          {
+            "id": 42657,
+            "mid": "004AgzAt2xT05E",
+            "name": "王笑文"
+          }
+        ],
+        "size128": 3948274,
+        "size320": 9870338,
+        "size5_1": 0,
+        "sizeape": 0,
+        "sizeflac": 26779555,
+        "sizeogg": 5414845,
+        "songid": 226728167,
+        "songmid": "003tQM761dx36m",
+        "songname": "字字伤",
+        "songorig": "字字伤",
+        "songtype": 0,
+        "strMediaMid": "003tQM761dx36m",
+        "stream": 13,
+        "switch": 605971,
+        "type": 0,
+        "vid": ""
+      },
+      {
+        "albumdesc": "《幕后之王》电视剧插曲",
+        "albumid": 5764164,
+        "albummid": "001tj1Yu3ycuX3",
+        "albumname": "幕后之王 电视原声音乐专辑",
+        "alertid": 11,
+        "belongCD": 7,
+        "cdIdx": 0,
+        "interval": 268,
+        "isonly": 0,
+        "label": "0",
+        "msgid": 0,
+        "pay": {
+          "payalbum": 0,
+          "payalbumprice": 0,
+          "paydownload": 0,
+          "payinfo": 0,
+          "payplay": 0,
+          "paytrackmouth": 0,
+          "paytrackprice": 0,
+          "timefree": 0
+        },
+        "preview": {
+          "trybegin": 0,
+          "tryend": 0,
+          "trysize": 0
+        },
+        "rate": 23,
+        "singer": [
+          {
+            "id": 42657,
+            "mid": "004AgzAt2xT05E",
+            "name": "王笑文"
+          }
+        ],
+        "size128": 4305203,
+        "size320": 10762673,
+        "size5_1": 0,
+        "sizeape": 0,
+        "sizeflac": 30640321,
+        "sizeogg": 6010080,
+        "songid": 226728175,
+        "songmid": "004B1xhm0kRKg6",
+        "songname": "乔木",
+        "songorig": "乔木",
+        "songtype": 0,
+        "strMediaMid": "004B1xhm0kRKg6",
+        "stream": 13,
+        "switch": 605971,
+        "type": 0,
+        "vid": ""
+      },
+      {
+        "albumdesc": "",
+        "albumid": 5764164,
+        "albummid": "001tj1Yu3ycuX3",
+        "albumname": "幕后之王 电视原声音乐专辑",
+        "alertid": 11,
+        "belongCD": 8,
+        "cdIdx": 0,
+        "interval": 257,
+        "isonly": 0,
+        "label": "0",
+        "msgid": 0,
+        "pay": {
+          "payalbum": 0,
+          "payalbumprice": 0,
+          "paydownload": 0,
+          "payinfo": 0,
+          "payplay": 0,
+          "paytrackmouth": 0,
+          "paytrackprice": 0,
+          "timefree": 0
+        },
+        "preview": {
+          "trybegin": 0,
+          "tryend": 0,
+          "trysize": 0
+        },
+        "rate": 23,
+        "singer": [
+          {
+            "id": 4607,
+            "mid": "000aw4WC2EQYTv",
+            "name": "张靓颖"
+          }
+        ],
+        "size128": 4116702,
+        "size320": 10291035,
+        "size5_1": 0,
+        "sizeape": 0,
+        "sizeflac": 51507330,
+        "sizeogg": 6181089,
+        "songid": 226725938,
+        "songmid": "0021E3gW3a5FS1",
+        "songname": "我爱你三个字能倒过来 (伴奏)",
+        "songorig": "我爱你三个字能倒过来",
+        "songtype": 0,
+        "strMediaMid": "0021E3gW3a5FS1",
+        "stream": 13,
+        "switch": 601875,
+        "type": 0,
+        "vid": ""
+      },
+      {
+        "albumdesc": "",
+        "albumid": 5764164,
+        "albummid": "001tj1Yu3ycuX3",
+        "albumname": "幕后之王 电视原声音乐专辑",
+        "alertid": 11,
+        "belongCD": 9,
+        "cdIdx": 0,
+        "interval": 228,
+        "isonly": 0,
+        "label": "0",
+        "msgid": 0,
+        "pay": {
+          "payalbum": 0,
+          "payalbumprice": 0,
+          "paydownload": 0,
+          "payinfo": 0,
+          "payplay": 0,
+          "paytrackmouth": 0,
+          "paytrackprice": 0,
+          "timefree": 0
+        },
+        "preview": {
+          "trybegin": 0,
+          "tryend": 0,
+          "trysize": 0
+        },
+        "rate": 23,
+        "singer": [
+          {
+            "id": 2096528,
+            "mid": "000W6adM4E0PK6",
+            "name": "陈立农"
+          }
+        ],
+        "size128": 3664934,
+        "size320": 9161933,
+        "size5_1": 0,
+        "sizeape": 0,
+        "sizeflac": 47843179,
+        "sizeogg": 5193535,
+        "songid": 226728172,
+        "songmid": "003bF3wn2KLlh3",
+        "songname": "有梦可待 (伴奏)",
+        "songorig": "有梦可待",
+        "songtype": 0,
+        "strMediaMid": "003bF3wn2KLlh3",
+        "stream": 13,
+        "switch": 601875,
+        "type": 0,
+        "vid": ""
+      },
+      {
+        "albumdesc": "",
+        "albumid": 5764164,
+        "albummid": "001tj1Yu3ycuX3",
+        "albumname": "幕后之王 电视原声音乐专辑",
+        "alertid": 11,
+        "belongCD": 10,
+        "cdIdx": 0,
+        "interval": 249,
+        "isonly": 0,
+        "label": "0",
+        "msgid": 0,
+        "pay": {
+          "payalbum": 0,
+          "payalbumprice": 0,
+          "paydownload": 0,
+          "payinfo": 0,
+          "payplay": 0,
+          "paytrackmouth": 0,
+          "paytrackprice": 0,
+          "timefree": 0
+        },
+        "preview": {
+          "trybegin": 0,
+          "tryend": 0,
+          "trysize": 0
+        },
+        "rate": 23,
+        "singer": [
+          {
+            "id": 3954,
+            "mid": "001z2JmX09LLgL",
+            "name": "汪苏泷"
+          }
+        ],
+        "size128": 3995519,
+        "size320": 9987997,
+        "size5_1": 0,
+        "sizeape": 0,
+        "sizeflac": 52186132,
+        "sizeogg": 6059916,
+        "songid": 226728177,
+        "songmid": "004HteLy2WtJNU",
+        "songname": "鲸落 (伴奏)",
+        "songorig": "鲸落",
+        "songtype": 0,
+        "strMediaMid": "004HteLy2WtJNU",
+        "stream": 13,
+        "switch": 601875,
+        "type": 0,
+        "vid": ""
+      },
+      {
+        "albumdesc": "",
+        "albumid": 5764164,
+        "albummid": "001tj1Yu3ycuX3",
+        "albumname": "幕后之王 电视原声音乐专辑",
+        "alertid": 11,
+        "belongCD": 11,
+        "cdIdx": 0,
+        "interval": 206,
+        "isonly": 0,
+        "label": "0",
+        "msgid": 0,
+        "pay": {
+          "payalbum": 0,
+          "payalbumprice": 0,
+          "paydownload": 0,
+          "payinfo": 0,
+          "payplay": 0,
+          "paytrackmouth": 0,
+          "paytrackprice": 0,
+          "timefree": 0
+        },
+        "preview": {
+          "trybegin": 0,
+          "tryend": 0,
+          "trysize": 0
+        },
+        "rate": 23,
+        "singer": [
+          {
+            "id": 178612,
+            "mid": "004OFF5J1uCT1c",
+            "name": "金玟岐"
+          }
+        ],
+        "size128": 3301293,
+        "size320": 8252856,
+        "size5_1": 0,
+        "sizeape": 0,
+        "sizeflac": 43076341,
+        "sizeogg": 4577972,
+        "songid": 226728176,
+        "songmid": "003pj4p83nKNOu",
+        "songname": "幕后大咖 (伴奏)",
+        "songorig": "幕后大咖",
+        "songtype": 0,
+        "strMediaMid": "003pj4p83nKNOu",
+        "stream": 13,
+        "switch": 601875,
+        "type": 0,
+        "vid": ""
+      },
+      {
+        "albumdesc": "",
+        "albumid": 5764164,
+        "albummid": "001tj1Yu3ycuX3",
+        "albumname": "幕后之王 电视原声音乐专辑",
+        "alertid": 11,
+        "belongCD": 12,
+        "cdIdx": 0,
+        "interval": 186,
+        "isonly": 0,
+        "label": "0",
+        "msgid": 0,
+        "pay": {
+          "payalbum": 0,
+          "payalbumprice": 0,
+          "paydownload": 0,
+          "payinfo": 0,
+          "payplay": 0,
+          "paytrackmouth": 0,
+          "paytrackprice": 0,
+          "timefree": 0
+        },
+        "preview": {
+          "trybegin": 0,
+          "tryend": 0,
+          "trysize": 0
+        },
+        "rate": 23,
+        "singer": [
+          {
+            "id": 1235352,
+            "mid": "000PvQw11mIVEK",
+            "name": "苏诗丁"
+          }
+        ],
+        "size128": 2989050,
+        "size320": 7471931,
+        "size5_1": 0,
+        "sizeape": 0,
+        "sizeflac": 39131201,
+        "sizeogg": 4498989,
+        "songid": 226728173,
+        "songmid": "003DjtYv2gmcHn",
+        "songname": "独白 (伴奏)",
+        "songorig": "独白",
+        "songtype": 0,
+        "strMediaMid": "003DjtYv2gmcHn",
+        "stream": 13,
+        "switch": 601875,
+        "type": 0,
+        "vid": ""
+      },
+      {
+        "albumdesc": "",
+        "albumid": 5764164,
+        "albummid": "001tj1Yu3ycuX3",
+        "albumname": "幕后之王 电视原声音乐专辑",
+        "alertid": 11,
+        "belongCD": 13,
+        "cdIdx": 0,
+        "interval": 268,
+        "isonly": 0,
+        "label": "0",
+        "msgid": 0,
+        "pay": {
+          "payalbum": 0,
+          "payalbumprice": 0,
+          "paydownload": 0,
+          "payinfo": 0,
+          "payplay": 0,
+          "paytrackmouth": 0,
+          "paytrackprice": 0,
+          "timefree": 0
+        },
+        "preview": {
+          "trybegin": 0,
+          "tryend": 0,
+          "trysize": 0
+        },
+        "rate": 23,
+        "singer": [
+          {
+            "id": 42657,
+            "mid": "004AgzAt2xT05E",
+            "name": "王笑文"
+          }
+        ],
+        "size128": 4305233,
+        "size320": 10762703,
+        "size5_1": 0,
+        "sizeape": 0,
+        "sizeflac": 54793416,
+        "sizeogg": 6354539,
+        "songid": 226728170,
+        "songmid": "001Eiu8L0aV7wA",
+        "songname": "乔木 (伴奏)",
+        "songorig": "乔木",
+        "songtype": 0,
+        "strMediaMid": "001Eiu8L0aV7wA",
+        "stream": 13,
+        "switch": 601875,
+        "type": 0,
+        "vid": ""
+      }
+    ],
+    "mid": "001tj1Yu3ycuX3",
+    "name": "幕后之王 电视原声音乐专辑",
+    "otherAlbums": [
+      {
+        "albumMid": "003hR0pe3TFrmx",
+        "albumid": 5770694,
+        "pubDate": "2019-1-4",
+        "title": "女神浙商",
+        "transName": ""
+      },
+      {
+        "albumMid": "002gzRYr4JopmE",
+        "albumid": 5769653,
+        "pubDate": "2019-1-4",
+        "title": "猪饱饱欢乐迎肥年",
+        "transName": ""
+      },
+      {
+        "albumMid": "000L5HOq0a2yom",
+        "albumid": 5710867,
+        "pubDate": "2019-1-3",
+        "title": "乐师新力量",
+        "transName": ""
+      }
+    ],
+    "radio_anchor": 0,
+    "singerid": 4423,
+    "singermblog": null,
+    "singermid": "000vYUqh1SqjQQ",
+    "singername": "华语群星",
+    "song_begin": 0,
+    "total": 13,
+    "totalAlbum": 6396,
+    "total_song_num": 13
+  }
+}
