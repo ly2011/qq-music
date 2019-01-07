@@ -16,6 +16,9 @@ import styles from './recommend.module.scss'
 
 // const sleep = ms => new Promise(r => setTimeout(r, ms))
 // 懒加载自身的业务组件
+const Swiper = lazy(async () => {
+  return import('./components/swiper/swiper')
+})
 const RadioList = lazy(async () => {
   return import('./components/radio_list/radio_list')
 })
@@ -64,19 +67,8 @@ class RecommendList extends PureComponent {
 
         {!isLoading && (
           <div className={styles['content']}>
-            {slider && (
-              <Carousel showThumbs={false} showStatus={false} dynamicHeight={true}>
-                {slider.map(item => (
-                  <div key={item.id} className={styles['slider_item']}>
-                    <LazyLoad height={200}>
-                      <img src={item.picUrl} alt="" />
-                    </LazyLoad>
-                  </div>
-                ))}
-              </Carousel>
-            )}
-
             <Suspense fallback={<LazyLoading />}>
+              <Swiper slider={slider} />
               <RadioList radioList={radioList} />
               <PlayLists songList={songList} toTaogePage={this.toTaogePage} />
             </Suspense>
