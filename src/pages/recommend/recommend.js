@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { PureComponent, Suspense, lazy } from 'react'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
 import LazyLoad from 'react-lazyload'
@@ -6,12 +6,22 @@ import LazyLoad from 'react-lazyload'
 import { connect } from 'dva'
 
 import { getRecommendList } from '../../services/getData'
-import { dealNum } from '../../utils/filter'
 
+// 加载公共组件
 import NavHeader from '../../components/nav_header/nav_header'
 import Loading from '../../components/loading/loading'
+import LazyLoading from '../../components/lazy_loading/lazy_loading'
 
 import styles from './recommend.module.scss'
+
+// const sleep = ms => new Promise(r => setTimeout(r, ms))
+// 懒加载自身的业务组件
+const RadioList = lazy(async () => {
+  return import('./components/radio_list/radio_list')
+})
+const PlayLists = lazy(async () => {
+  return import('./components/playlists/playlists')
+})
 
 class RecommendList extends PureComponent {
   state = {
@@ -66,7 +76,12 @@ class RecommendList extends PureComponent {
               </Carousel>
             )}
 
-            <div className={styles['radios']}>
+            <Suspense fallback={<LazyLoading />}>
+              <RadioList radioList={radioList} />
+              <PlayLists songList={songList} toTaogePage={this.toTaogePage} />
+            </Suspense>
+
+            {/* <div className={styles['radios']}>
               {radioList && <h2 className={styles['list_title']}>电台</h2>}
               <ul className={styles['list_container']}>
                 {radioList &&
@@ -86,9 +101,9 @@ class RecommendList extends PureComponent {
                     </li>
                   ))}
               </ul>
-            </div>
+            </div> */}
 
-            <div className={styles['playlists']}>
+            {/*             <div className={styles['playlists']}>
               {songList && <h2 className={styles['list_title']}>热门歌曲</h2>}
               <ul className={styles['list_container']}>
                 {songList &&
@@ -113,7 +128,7 @@ class RecommendList extends PureComponent {
                     </li>
                   ))}
               </ul>
-            </div>
+            </div> */}
           </div>
         )}
 
