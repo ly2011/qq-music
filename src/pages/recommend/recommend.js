@@ -1,8 +1,4 @@
 import React, { PureComponent, Suspense, lazy } from 'react'
-import 'react-responsive-carousel/lib/styles/carousel.min.css'
-import { Carousel } from 'react-responsive-carousel'
-import LazyLoad from 'react-lazyload'
-
 import { connect } from 'dva'
 
 import { getRecommendList } from '../../services/getData'
@@ -72,55 +68,6 @@ class RecommendList extends PureComponent {
               <RadioList radioList={radioList} />
               <PlayLists songList={songList} toTaogePage={this.toTaogePage} />
             </Suspense>
-
-            {/* <div className={styles['radios']}>
-              {radioList && <h2 className={styles['list_title']}>电台</h2>}
-              <ul className={styles['list_container']}>
-                {radioList &&
-                  radioList.map(item => (
-                    <li className={styles['js_play_radio']} key={item.radioid}>
-                      <a href="javascript:;" className={styles['list_main']}>
-                        <div className={styles['list_media']}>
-                          <LazyLoad height={200}>
-                            <img className={styles['list_pic']} src={item.picUrl} alt="" />
-                          </LazyLoad>
-                          <span className={`${styles['icon']} ${styles['icon_play']}`} />
-                        </div>
-                        <div className={styles['list_info']}>
-                          <h3 className={styles['list_tit']}>{item.Ftitle}</h3>
-                        </div>
-                      </a>
-                    </li>
-                  ))}
-              </ul>
-            </div> */}
-
-            {/*             <div className={styles['playlists']}>
-              {songList && <h2 className={styles['list_title']}>热门歌曲</h2>}
-              <ul className={styles['list_container']}>
-                {songList &&
-                  songList.map(item => (
-                    <li className={styles['js_play_radio']} key={item.id}>
-                      <a href="javascript:;" className={styles['list_main']} onClick={() => this.toTaogePage(item.id)}>
-                        <div className={styles['list_media']}>
-                          <LazyLoad height={200}>
-                            <img className={styles['list_pic']} src={item.picUrl} alt="" />
-                          </LazyLoad>
-                          <span className={styles['listen_count']}>
-                            <i className={`${styles['icon_listen']}`} />
-                            {dealNum(item.accessnum)}
-                          </span>
-                          <span className={`${styles['icon']} ${styles['icon_play']}`} />
-                        </div>
-                        <div className={styles['list_info']}>
-                          <h3 className={[styles['list_tit']]}>{item.songListDesc}</h3>
-                          <p className={styles['list_text']}>{item.songListAuthor}</p>
-                        </div>
-                      </a>
-                    </li>
-                  ))}
-              </ul>
-            </div> */}
           </div>
         )}
 

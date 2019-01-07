@@ -16,7 +16,7 @@ const PlayLists = ({ songList, toTaogePage }) => {
               <li className={styles['js_play_radio']} key={item.id}>
                 <a href="javascript:;" className={styles['list_main']} onClick={() => toTaogePage(item.id)}>
                   <div className={styles['list_media']}>
-                    <LazyLoad height={200}>
+                    <LazyLoad height={200} offset={100}>
                       <img className={styles['list_pic']} src={item.picUrl} alt="" />
                     </LazyLoad>
                     <span className={styles['listen_count']}>
