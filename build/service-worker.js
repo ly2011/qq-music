@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/qq-music/precache-manifest.06ec43382ab7b15f3035f8b6beb1de84.js"
+  "/qq-music/precache-manifest.574e2178532a605f7cec26ab7b33a38b.js"
 );
 
 workbox.clientsClaim();

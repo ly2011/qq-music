@@ -4,6 +4,8 @@ import router from './router'
 
 import './index.scss'
 
+import * as serviceWorker from './serviceWorker'
+
 // 1.Initialize
 const app = dva({
   history: createHistory(),
@@ -24,6 +26,4 @@ app.router(router)
 // 5. Start
 app.start('#root')
 
-// import * as serviceWorker from './serviceWorker';
-
-// serviceWorker.unregister();
+serviceWorker.unregister()
