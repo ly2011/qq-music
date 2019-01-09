@@ -57,7 +57,7 @@ class Taoge extends PureComponent {
             <div className={styles['count_box']}>
               <div className={styles['count_box__desc']}>
                 歌单
-                <span className={styles['count_box__number']}>共66首</span>
+                <span className={styles['count_box__number']}>共{songInfo.total_song_num}首</span>
               </div>
               <a href="javascript:;" className={styles['collect']}>
                 收藏

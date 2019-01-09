@@ -3,6 +3,7 @@ import { connect } from 'dva'
 import { getHotList, getSearchList } from '../../services/getData'
 
 import Loading from '../../components/loading/loading'
+import SearchLoading from './components/search_loading/search_loading'
 
 import styles from './search.module.scss'
 
@@ -15,16 +16,24 @@ class Search extends PureComponent {
     isShowDelete: false, // 是否显示删除
     isShowSearchResults: false, // 是否显示搜索结果
     isShowHistory: false, // 是否显示历史记录
+    page: 1, // 默认搜索页数为1
     searchResult: null, // 搜索结果
+    getLastKeyword: '', // 获取用户上一次的搜索内容
+    songsObject: {}, // 存放歌曲,用来判断是否搜索改变了
     history: [], // 播放历史记录
     isGetHotKey: false, // 是否获取hotkey
-    isLoading: false
+    isLoading: false, // 是否在加载搜索结果
+    isLoad: true // 能否继续加载数据
   }
   componentDidMount() {
+    window.addEventListener('scroll', this.onScroll)
     this.setState({
       history: localStorage.getItem('HISTORY_KEY') ? localStorage.getItem('HISTORY_KEY').split(',') : []
     })
     this.getHotList()
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScroll)
   }
   // 获取热门搜索
   getHotList() {
@@ -164,13 +173,27 @@ class Search extends PureComponent {
     if (keyword === undefined) keyword = ''
     if (keyword === '') return
 
+    //如果已经搜索过，并且没有改动 keyword 那么直接返回
+    if (this.state.getLastKeyword === keyword && this.state.songsObject[page || this.state.page]) return
+
+    if (this.state.isLoading || !this.state.isLoad) return
+    if (this.state.getLastKeyword !== keyword) this.reset()
+    this.setState({
+      getLastKeyword: keyword
+    })
+    this.setState({
+      isLoading: true
+    })
+
     getSearchList(keyword, page || this.state.page)
       .then(res => {
         this.setState({
           page: res.data.song.curpage,
+          songsObject: { ...this.state.songsObject, [page || this.state.page]: res.data.song.list },
           searchResult: this.state.searchResult
             ? this.state.searchResult.concat(res.data.song.list)
             : res.data.song.list,
+          isLoading: false,
           isLoad: res.message !== 'no results'
         })
       })
@@ -178,6 +201,18 @@ class Search extends PureComponent {
         console.error(err)
       })
   }
+
+  // 滚动加载数据
+  onScroll = e => {
+    if (this.state.isLoad) {
+      if (document.documentElement.clientHeight + window.pageYOffset > document.body.scrollHeight - 100) {
+        this.search(this.state.keyword, this.state.page + 1)
+      }
+    } else {
+      return window.removeEventListener('scroll', this.onScroll)
+    }
+  }
+
   // 显示 player 信息
   showPlayerDetail = song => {
     const { showPlayer, getSong } = this.props
@@ -191,6 +226,7 @@ class Search extends PureComponent {
     this.setState({
       page: 1,
       isLoad: true,
+      songsObject: {},
       searchResult: null
     })
   }
@@ -213,6 +249,7 @@ class Search extends PureComponent {
   render() {
     const {
       isLoading,
+      isLoad,
       keyword,
       isShowCancel,
       isShowDelete,
@@ -226,102 +263,107 @@ class Search extends PureComponent {
     } = this.state
     return (
       <div className={styles['search_wrap']}>
-        {!isLoading && (
-          <div className={styles['content']}>
-            <div className={styles['search_bar']}>
-              <div className={styles['input_wrap']}>
-                <input
-                  type="text"
-                  className={styles['search_input']}
-                  value={keyword}
-                  onChange={this.handleSearchChange}
-                  onKeyUp={this.handleSearchEnter}
-                  onClick={this.handleSearchClick}
-                  placeholder="搜索歌曲、歌单、专辑"
-                />
-                <span className={styles['icon_search']} />
-                {isShowDelete && (
-                  <span className={styles['icon_delete']} onClick={this.handleClickSearchDelete}>
-                    删除
-                  </span>
-                )}
-              </div>
-              {isShowCancel && (
-                <div className={styles['search_cancel']} onClick={this.handleClickSearchCancel}>
-                  取消
-                </div>
+        <div className={styles['content']}>
+          <div className={styles['search_bar']}>
+            <div className={styles['input_wrap']}>
+              <input
+                type="text"
+                className={styles['search_input']}
+                value={keyword}
+                onChange={this.handleSearchChange}
+                onKeyUp={this.handleSearchEnter}
+                onClick={this.handleSearchClick}
+                placeholder="搜索歌曲、歌单、专辑"
+              />
+              <span className={styles['icon_search']} />
+              {isShowDelete && (
+                <span className={styles['icon_delete']} onClick={this.handleClickSearchDelete}>
+                  删除
+                </span>
               )}
             </div>
-
-            {history.length > 0 && isShowHistory && (
-              <div className={styles['record_keys']}>
-                {history.map((item, index) => (
-                  <li key={item} className={styles['record_item']}>
-                    <div className={styles['record_main']}>
-                      <i className={`${styles['icon_clock']}`} />
-                      <span className={styles['record_con']} onClick={() => this.handleClickHotKey(item)}>
-                        {item}
-                      </span>
-                      <i className={styles['icon_close']} onClick={() => this.handleRecordDelete(item)} />
-                    </div>
-                  </li>
-                ))}
-                <p className={styles['record_delete']} onClick={this.handleRecordDeleteAll}>
-                  清除搜索记录
-                </p>
-              </div>
-            )}
-
-            {isShowSearchResults && (
-              <div className={styles['search_results']}>
-                <div className={styles['song_list']}>
-                  {searchResult &&
-                    searchResult.map(item => (
-                      <div
-                        className={styles['song_item']}
-                        key={item.songid}
-                        onClick={() => this.showPlayerDetail(item)}
-                      >
-                        <i className={styles['icon_music']} />
-                        <div className={styles['song_name']} dangerouslySetInnerHTML={{ __html: item.songname }} />
-                        <div className={styles['song_artiist']}>
-                          {item.singer &&
-                            item.singer.map((artist, index) => <span key={index}>{artist.name + ' '}</span>)}
-                        </div>
-                      </div>
-                    ))}
-                </div>
-              </div>
-            )}
-
-            {!isShowHistory && !isShowSearchResults && (
-              <div className={styles['mod_search_result']}>
-                <h3 className={styles['result_tit']}>热门搜索</h3>
-                {isGetHotKey && (
-                  <div className={styles['result_tags']}>
-                    {defaultHotKeys.special_url && (
-                      <a href={defaultHotKeys.special_url} className={`${styles['tag']} ${styles['tag_hot']}`}>
-                        {defaultHotKeys.special_key}
-                      </a>
-                    )}
-                    {hotkeys &&
-                      hotkeys.map(hotkey => (
-                        <div
-                          className={`${styles['tag']} ${styles['tag_keyword']}`}
-                          key={hotkey.n}
-                          onClick={() => this.handleClickHotKey(hotkey.k)}
-                        >
-                          {hotkey.k}
-                        </div>
-                      ))}
-                  </div>
-                )}
+            {isShowCancel && (
+              <div className={styles['search_cancel']} onClick={this.handleClickSearchCancel}>
+                取消
               </div>
             )}
           </div>
-        )}
 
-        {isLoading && <Loading />}
+          {history.length > 0 && isShowHistory && (
+            <div className={styles['record_keys']}>
+              {history.map((item, index) => (
+                <li key={item} className={styles['record_item']}>
+                  <div className={styles['record_main']}>
+                    <i className={`${styles['icon_clock']}`} />
+                    <span className={styles['record_con']} onClick={() => this.handleClickHotKey(item)}>
+                      {item}
+                    </span>
+                    <i className={styles['icon_close']} onClick={() => this.handleRecordDelete(item)} />
+                  </div>
+                </li>
+              ))}
+              <p className={styles['record_delete']} onClick={this.handleRecordDeleteAll}>
+                清除搜索记录
+              </p>
+            </div>
+          )}
+
+          {isShowSearchResults && (
+            <div className={styles['search_results']}>
+              <div className={styles['song_list']}>
+                {searchResult &&
+                  searchResult.map((item, songIndex) => (
+                    <div
+                      className={styles['song_item']}
+                      key={item.songid + '' + songIndex}
+                      onClick={() => this.showPlayerDetail(item)}
+                    >
+                      <i className={styles['icon_music']} />
+                      <div className={styles['song_name']} dangerouslySetInnerHTML={{ __html: item.songname }} />
+                      <div className={styles['song_artiist']}>
+                        {item.singer &&
+                          item.singer.map((artist, index) => <span key={index}>{artist.name + ' '}</span>)}
+                      </div>
+                    </div>
+                  ))}
+              </div>
+              {isLoading && <SearchLoading message="正在载入更多..." />}
+              {!isLoad && (
+                <SearchLoading>
+                  <div className={styles['loading_done']} style={{ color: '#808080', fontSize: '12px' }}>
+                    已加载全部
+                  </div>
+                </SearchLoading>
+              )}
+            </div>
+          )}
+
+          {!isShowHistory && !isShowSearchResults && (
+            <div className={styles['mod_search_result']}>
+              <h3 className={styles['result_tit']}>热门搜索</h3>
+              {isGetHotKey && (
+                <div className={styles['result_tags']}>
+                  {defaultHotKeys.special_url && (
+                    <a href={defaultHotKeys.special_url} className={`${styles['tag']} ${styles['tag_hot']}`}>
+                      {defaultHotKeys.special_key}
+                    </a>
+                  )}
+                  {hotkeys &&
+                    hotkeys.map(hotkey => (
+                      <div
+                        className={`${styles['tag']} ${styles['tag_keyword']}`}
+                        key={hotkey.n}
+                        onClick={() => this.handleClickHotKey(hotkey.k)}
+                      >
+                        {hotkey.k}
+                      </div>
+                    ))}
+                </div>
+              )}
+              {!isGetHotKey && <SearchLoading message="正在加载..." />}
+            </div>
+          )}
+        </div>
       </div>
     )
   }
