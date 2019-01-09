@@ -8,20 +8,20 @@ self.__precacheManifest = [
     "url": "/qq-music/static/js/0.7a33b853.chunk.js"
   },
   {
-    "revision": "0b0cae582d64f1824752",
-    "url": "/qq-music/static/js/main.0b0cae58.chunk.js"
+    "revision": "618a9f9392800b546ae5",
+    "url": "/qq-music/static/js/main.618a9f93.chunk.js"
   },
   {
     "revision": "9bb14540b209ee1a411e3cbb04b13554",
     "url": "/qq-music/static/media/logo.9bb14540.svg"
   },
   {
-    "revision": "82b287aee990dd22e442",
-    "url": "/qq-music/static/js/2.82b287ae.chunk.js"
+    "revision": "d5366e2b95cff5bcbc55",
+    "url": "/qq-music/static/js/2.d5366e2b.chunk.js"
   },
   {
-    "revision": "6761dcc6b44fabb38842",
-    "url": "/qq-music/static/js/runtime~main.6761dcc6.js"
+    "revision": "b30380e049a90da2b4f9",
+    "url": "/qq-music/static/js/runtime~main.b30380e0.js"
   },
   {
     "revision": "1a85c1ad093e2db769ec",
@@ -56,11 +56,11 @@ self.__precacheManifest = [
     "url": "/qq-music/static/js/8.cca44746.chunk.js"
   },
   {
-    "revision": "31dbb52afe6a3e8c5ac9",
-    "url": "/qq-music/static/js/7.31dbb52a.chunk.js"
+    "revision": "8f61e9bf04206401f163",
+    "url": "/qq-music/static/js/7.8f61e9bf.chunk.js"
   },
   {
-    "revision": "0b0cae582d64f1824752",
+    "revision": "618a9f9392800b546ae5",
     "url": "/qq-music/static/css/main.2c1ef40c.chunk.css"
   },
   {
@@ -68,7 +68,7 @@ self.__precacheManifest = [
     "url": "/qq-music/static/css/8.3eb70af8.chunk.css"
   },
   {
-    "revision": "31dbb52afe6a3e8c5ac9",
+    "revision": "8f61e9bf04206401f163",
     "url": "/qq-music/static/css/7.f55f01ba.chunk.css"
   },
   {
@@ -88,7 +88,7 @@ self.__precacheManifest = [
     "url": "/qq-music/static/css/3.cb5539b0.chunk.css"
   },
   {
-    "revision": "82b287aee990dd22e442",
+    "revision": "d5366e2b95cff5bcbc55",
     "url": "/qq-music/static/css/2.35536266.chunk.css"
   },
   {
@@ -96,7 +96,7 @@ self.__precacheManifest = [
     "url": "/qq-music/static/css/12.6bfc3ce6.chunk.css"
   },
   {
-    "revision": "528c4abd8a25276e5eccd87170781108",
+    "revision": "433eaf1e7226260abb6d2ad65bb47ea7",
     "url": "/qq-music/index.html"
   }
 ];

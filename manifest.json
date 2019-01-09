@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "qq-music",
+  "name": "QQ音乐",
   "icons": [
     {
       "src": "favicon.ico",
