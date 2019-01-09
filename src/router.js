@@ -8,7 +8,7 @@ import Search from './pages/search/search'
 import Player from './components/player/player' */
 
 export default function({ history, app }) {
-  const RecommendList = dynamic({
+  /*   const RecommendList = dynamic({
     app,
     component: () => import('./pages/recommend/recommend')
   })
@@ -19,6 +19,10 @@ export default function({ history, app }) {
   const Search = dynamic({
     app,
     component: () => import('./pages/search/search')
+  }) */
+  const DashBoard = dynamic({
+    app,
+    component: () => import('./pages/dashboard/dashboard')
   })
   const Player = dynamic({
     app,
@@ -31,11 +35,12 @@ export default function({ history, app }) {
   return (
     <Router history={history}>
       <Switch>
-        <Route exact path="/" component={RecommendList} />
+        {/* <Route exact path="/" component={RecommendList} />
         <Route exact path="/rank" component={RankList} />
-        <Route exact path="/search" component={Search} />
+        <Route exact path="/search" component={Search} /> */}
         <Route exact path="/player" component={Player} />
         <Route exact path="/taoge/:songid" component={Taoge} />
+        <Route component={DashBoard} />
       </Switch>
     </Router>
   )

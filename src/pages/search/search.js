@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react'
 import { connect } from 'dva'
 import { getHotList, getSearchList } from '../../services/getData'
 
-import NavHeader from '../../components/nav_header/nav_header'
 import Loading from '../../components/loading/loading'
 
 import styles from './search.module.scss'
@@ -227,8 +226,6 @@ class Search extends PureComponent {
     } = this.state
     return (
       <div className={styles['search_wrap']}>
-        <NavHeader />
-
         {!isLoading && (
           <div className={styles['content']}>
             <div className={styles['search_bar']}>

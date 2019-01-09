@@ -4,7 +4,6 @@ import { connect } from 'dva'
 import { getRecommendList } from '../../services/getData'
 
 // 加载公共组件
-import NavHeader from '../../components/nav_header/nav_header'
 import Loading from '../../components/loading/loading'
 import LazyLoading from '../../components/lazy_loading/lazy_loading'
 
@@ -59,8 +58,6 @@ class RecommendList extends PureComponent {
     const { isLoading, slider, radioList, songList } = this.state
     return (
       <div className={styles['content_wrapper']}>
-        <NavHeader />
-
         {!isLoading && (
           <div className={styles['content']}>
             <Suspense fallback={<LazyLoading />}>

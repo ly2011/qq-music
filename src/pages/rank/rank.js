@@ -4,7 +4,6 @@ import LazyLoad from 'react-lazyload'
 import { getRankList } from '../../services/getData'
 import { dealNum } from '../../utils/filter'
 
-import NavHeader from '../../components/nav_header/nav_header'
 import Loading from '../../components/loading/loading'
 
 import styles from './rank.module.scss'
@@ -38,8 +37,6 @@ class RankList extends PureComponent {
     const { rankList, isLoading } = this.state
     return (
       <div className={styles['toplist_wrap']}>
-        <NavHeader />
-
         {!isLoading && (
           <div className={styles['content']}>
             <ul className={styles.toplist}>

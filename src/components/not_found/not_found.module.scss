@@ -1,0 +1,20 @@
+@import '../../styles/variables.scss';
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 130px;
+  padding: 0 20px;
+  height: 40px;
+  overflow: hidden;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 20px;
+  background-color: $color-primary;
+}
